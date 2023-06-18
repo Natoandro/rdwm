@@ -1,0 +1,19 @@
+[package]
+name = "dwm"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "rdwm"
+crate-type = ["staticlib"]
+
+[dependencies]
+subprocess = "0.2.9"
+log = "0.4.19"
+simplelog = "0.12.1"
+dirs = "5.0.1"
+chrono = "0.4.26"
+
+[build-dependencies]
+cbindgen = "0.24.5"
+

@@ -22,7 +22,10 @@ ${OBJ}: config.h config.mk
 config.h:
 	cp config.def.h $@
 
-dwm: ${OBJ}
+librdwm:
+	cargo build --release
+
+dwm: ${OBJ} librdwm
 	${CC} -o $@ ${OBJ} ${LDFLAGS}
 
 clean:
